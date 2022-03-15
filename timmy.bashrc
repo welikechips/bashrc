@@ -93,6 +93,8 @@ alias _='sudo'
 alias _i='sudo -i'
 alias please='sudo'
 alias fucking='sudo'
+
+alias open-folder='xdg-open .'
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
