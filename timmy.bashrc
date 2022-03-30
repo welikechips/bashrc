@@ -95,6 +95,7 @@ alias please='sudo'
 alias fucking='sudo'
 
 alias open-folder='xdg-open .'
+alias gettun='ifconfig tun0 | grep inet | grep -v inet6 | grep -Po "inet \K[\d\.]+"'
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
