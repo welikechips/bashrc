@@ -113,3 +113,4 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+TZ='America/New_York'; export TZ
