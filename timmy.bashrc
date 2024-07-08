@@ -135,12 +135,12 @@ function dockershellshhere() {
     docker run --rm -it --entrypoint=/bin/sh -v `pwd`:/${dirname} -w /${dirname} "$@"
 }
 
-//This one will need to have a virtual box install and available
-// https://github.com/StefanScherer/windows-docker-machine
-//function dockerwindowshellhere() {
-//    dirname=${PWD##*/}
-//    docker -c 2019-box run --rm -it -v "C:${PWD}:C:/source" -w "C:/source" "$@"
-//}
+#This one will need to have a virtual box install and available
+# https://github.com/StefanScherer/windows-docker-machine
+#function dockerwindowshellhere() {
+#    dirname=${PWD##*/}
+#    docker -c 2019-box run --rm -it -v "C:${PWD}:C:/source" -w "C:/source" "$@"
+#}
 
 impacket() {
     docker run --rm -it rflathers/impacket "$@"
