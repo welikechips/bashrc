@@ -116,23 +116,14 @@ if ! shopt -oq posix; then
   fi
 fi
 TZ='America/New_York'; export TZ
-alias dockershell="docker run --rm -i -t --entrypoint=/bin/bash"
 
 function dockershell() {
     docker run --rm -i -t --entrypoint=/bin/bash "$@"
 }
 
-function dockershellsh() {
-    docker run --rm -i -t --entrypoint=/bin/sh "$@"
-}
-
 function dockershellhere() {
     dirname=${PWD##*/}
     docker run --rm -it --entrypoint=/bin/bash -v `pwd`:/${dirname} -w /${dirname} "$@"
-}
-
-function dockershellshhere() {
-    docker run --rm -it --entrypoint=/bin/sh -v `pwd`:/${dirname} -w /${dirname} "$@"
 }
 
 #This one will need to have a virtual box install and available
